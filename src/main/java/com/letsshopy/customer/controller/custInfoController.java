@@ -1,5 +1,7 @@
 package com.letsshopy.customer.controller;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -21,5 +23,11 @@ public class custInfoController {
 	@RequestMapping(value="/getdet/cust/getprofinfobyun/{username}",method=RequestMethod.GET,produces=MediaType.APPLICATION_JSON_VALUE)
 	public custDetailsEntity getCustByUN(@PathVariable("username")String uName) {
 		return custDet.getCustByUN(uName);
+	}
+	
+	@ResponseBody
+	@RequestMapping(value="/getdet/cust/getallcust",method=RequestMethod.GET,produces=MediaType.APPLICATION_JSON_VALUE)
+	public List<custDetailsEntity> getAllCust() {
+		return custDet.getAllCust();
 	}
 }

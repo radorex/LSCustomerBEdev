@@ -1,5 +1,7 @@
 package com.letsshopy.customer.serviceImpl;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -18,6 +20,11 @@ public class customerDetailsImpl implements customerDetails {
 		// TODO Auto-generated method stub
 		return custDetDAO.getCustByUN(uName);
 	}
-	
+
+	@Override
+	public List<custDetailsEntity> getAllCust() {
+		// TODO Auto-generated method stub
+		return custDetDAO.findAll();
+	}
 	
 }

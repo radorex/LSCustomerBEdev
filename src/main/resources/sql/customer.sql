@@ -15,4 +15,4 @@ create table custInfo(
 	PRIMARY KEY (custid)
 );
 
-insert into custInfo values(1001,'radorexx','Himanshu Shrivastava',26,'Male','Sipri Bazar, Jhansi(U.P.)',284003,'+917839909765','himansjhs@gmail.com');
+insert into custInfo values(1001,'RajS','Raj S',20,'Male','Delhi',100001,'+919999999999','rajs@abc.com');

@@ -9,9 +9,11 @@ public class customer {
 	private String address;
 	private Integer mobileNumber;
 	private String email;
+	private Integer custId;
 	
+
 	public customer(String username, String name, String age, String gender, String address, Integer mobileNumber,
-			String email) {
+			String email, Integer custId) {
 		super();
 		this.username = username;
 		this.name = name;
@@ -20,7 +22,9 @@ public class customer {
 		this.address = address;
 		this.mobileNumber = mobileNumber;
 		this.email = email;
+		this.custId = custId;
 	}
+
 
 	public String getUsername() {
 		return username;
@@ -76,6 +80,14 @@ public class customer {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public Integer getCustId() {
+		return custId;
+	}
+
+	public void setCustId(Integer custId) {
+		this.custId = custId;
 	}
 
 	@Override

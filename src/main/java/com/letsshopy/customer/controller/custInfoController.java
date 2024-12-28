@@ -39,4 +39,14 @@ public class custInfoController {
 	public Optional<custDetailsEntity> getcustinfobyid(@RequestBody customer cust) {
 		return custDet.getcustinfobyid(cust);
 	}
+	
+	
+	@ResponseBody
+	@RequestMapping(value="/getdet/cust/addnewcust",method=RequestMethod.POST,produces=MediaType.APPLICATION_JSON_VALUE)
+	public custDetailsEntity addnewcust(@RequestBody customer cust) {
+		custDetailsEntity custe = new custDetailsEntity();
+		custe.setName(cust.getName());
+		return custe;
+	}
+	
 }
